@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Rose Day 🌹</title>
+  <style>
+    body {
+      background-color: #ffe6e6;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      color: #ff0055;
+      animation: fadeIn 3s ease-in;
+    }
+    h1 {
+      font-size: 3em;
+      margin-top: 20px;
+    }
+    p {
+      font-size: 1.5em;
+      margin-top: 20px;
+    }
+    .rose-image {
+      width: 300px;
+      height: auto;
+      margin-top: 20px;
+    }
+    .heart {
+      font-size: 5em;
+      color: red;
+    }
+    .button {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      color: white;
+      background-color: #ff3366;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #cc0044;
+    }
+    .animation {
+      display: none;
+      position: relative;
+      margin-top: 50px;
+    }
+    .boy, .girl {
+      width: 150px;
+      height: auto;
+      position: absolute;
+      top: 0;
+    }
+    .boy {
+      left: -180px;
+      animation: boyMove 3s forwards;
+    }
+    .girl {
+      right: -180px;
+      animation: girlMove 3s forwards;
+    }
+    @keyframes boyMove {
+      to {
+        left: 50px;
+      }
+    }
+    @keyframes girlMove {
+      to {
+        right: 50px;
+      }
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy Rose Day 🌹</h1>
+  <p>Roses are red, violets are blue,<br>I'm so lucky to have someone like you! ❤️</p>
+  <p class="heart">💖💖💖</p>
+  <img src="C:/Users/OM/Pictures/New folder/tina.jpg" alt="Rose" class="rose-image">
+  <p>Will you be mine forever? 💍</p>
+  <button class="button" onclick="showAnimation()">Yes, I Will! 😊</button>
+
+  <div class="animation" id="kissAnimation">
+    <img src="C:/Users/OM/Pictures/New folder/boy.png" alt="Boy" class="boy">
+    <img src="C:/Users/OM/Pictures/New folder/gir.png" alt="Girl" class="girl">
+  </div>
+
+  <audio id="bgMusic" loop>
+    <source src="Downloads\song1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    window.onload = function() {
+      document.getElementById('bgMusic').play();
+    };
+
+    function showAnimation() {
+      document.getElementById('kissAnimation').style.display = 'block';
+      setTimeout(function() {
+        window.location.href = "thank_you.html";  // Redirect to thank_you.html page after 4 seconds
+      }, 4000);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Proposal Animation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7eaea;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .proposal-container {
+            text-align: center;
+            position: relative;
+        }
+
+        .message {
+            font-size: 24px;
+            color: #e74c3c;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 3s ease forwards;
+            animation-delay: 3s;
+        }
+
+        .heart {
+            font-size: 100px;
+            color: #e74c3c;
+            animation: heartBeat 1s infinite;
+        }
+
+        .character {
+            position: relative;
+            height: 150px;
+            width: 100px;
+            background-color: #3498db;
+            margin: 0 auto;
+            border-radius: 50px 50px 0 0;
+            animation: kneel 3s ease forwards;
+        }
+
+        .arm {
+            position: absolute;
+            background-color: #3498db;
+            height: 60px;
+            width: 20px;
+            top: 50px;
+            border-radius: 10px;
+        }
+
+        .left-arm {
+            left: -30px;
+            transform-origin: top right;
+            animation: moveArm 3s ease forwards;
+        }
+
+        .right-arm {
+            right: -30px;
+        }
+
+        .ring {
+            position: absolute;
+            top: 30px;
+            left: 120px;
+            width: 20px;
+            height: 20px;
+            background-color: gold;
+            border-radius: 50%;
+            opacity: 0;
+            animation: ringAppear 3s ease forwards;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        @keyframes kneel {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(50px); }
+        }
+
+        @keyframes moveArm {
+            0% { transform: rotate(0); }
+            100% { transform: rotate(-45deg); }
+        }
+
+        @keyframes ringAppear {
+            0% { opacity: 0; transform: scale(0); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="proposal-container">
+    <div class="message">Will you marry me?</div>
+    <div class="heart">❤️</div>
+    <div class="character">
+        <div class="arm left-arm"></div>
+        <div class="arm right-arm"></div>
+    </div>
+    <div class="ring"></div>
+</div>
+
+</body>
+</html>
