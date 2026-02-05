@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(circle, #1a0010, #000);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: white;
+  font-family: Arial;
+}
+
+/* Title glow */
+.title {
+  font-size: 38px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 15px pink;
+}
+
+/* Glass dome */
+.dome {
+  position: relative;
+  width: 220px;
+  height: 300px;
+  border-radius: 120px 120px 30px 30px;
+  background: rgba(255,255,255,0.05);
+  border: 2px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 40px rgba(255,255,255,0.1);
+  overflow: hidden;
+}
+
+/* Rose petals */
+.petal {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: crimson;
+  border-radius: 50%;
+  box-shadow: 0 0 15px red;
+  animation: bloom 3s infinite alternate ease-in-out;
+}
+
+.p1 { top: 70px; left: 80px; }
+.p2 { top: 50px; left: 60px; }
+.p3 { top: 50px; left: 100px; }
+
+.center {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: darkred;
+  border-radius: 50%;
+  top: 85px;
+  left: 95px;
+}
+
+.stem {
+  position: absolute;
+  width: 6px;
+  height: 120px;
+  background: green;
+  top: 110px;
+  left: 108px;
+}
+
+/* Bloom animation */
+@keyframes bloom {
+  from { transform: scale(0.7); }
+  to { transform: scale(1.1); }
+}
+
+/* Falling petals */
+.falling {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: crimson;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(300px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Sparkles */
+.sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  animation: sparkleAnim 2s infinite;
+}
+
+@keyframes sparkleAnim {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+.musicBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: crimson;
+  color: white;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px red;
+}
+
+.musicBtn:hover {
+  background: darkred;
+}

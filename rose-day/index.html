@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Glass Dome Rose</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 class="title">Happy Rose Day 🌹</h1>
+
+<div class="scene">
+  <div class="dome" id="dome">
+
+    <!-- Sparkles -->
+    <div class="sparkles" id="sparkles"></div>
+
+    <!-- Rose -->
+    <div class="rose">
+      <div class="petal p1"></div>
+      <div class="petal p2"></div>
+      <div class="petal p3"></div>
+      <div class="center"></div>
+      <div class="stem"></div>
+    </div>
+
+    <!-- Falling petals container -->
+    <div class="petal-fall" id="petalFall"></div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+<audio id="bgMusic" loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="playMusic()" class="musicBtn">Play Music 🎵</button>
+
+</body>
+</html>
